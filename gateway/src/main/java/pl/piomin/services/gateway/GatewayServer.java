@@ -24,7 +24,7 @@ public class GatewayServer {
 
 	@Bean
 	public DataSource dataSource() {
-		return DataSourceBuilder.create().url("jdbc:mysql://192.168.99.100:33306/default?useSSL=false")
-				.username("default").password("default").driverClassName("com.mysql.jdbc.Driver").build();
+		return DataSourceBuilder.create().url("jdbc:postgresql://localhost:5432/default?ssl=false")
+				.username("postgres").password("qwellk123").driverClassName("org.postgresql.Driver").build();
 	}
 }

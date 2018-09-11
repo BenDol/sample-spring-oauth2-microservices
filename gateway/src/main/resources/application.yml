@@ -5,16 +5,16 @@ spring:
   application:
     name: gateway-server
   datasource:
-    url: jdbc:mysql://192.168.99.100:33306/default?useSSL=false
-    username: default
-    password: default
+    url: jdbc:postgresql://localhost:5432/default?ssl=false
+    username: postgres
+    password: qwellk123
 
 logging:
   level:
     org.springframework.cloud.netflix.zuul: TRACE
-      
+
 zuul:
-  routes:  
+  routes:
     uaa:
       path: /uaa/**
       sensitiveHeaders:
@@ -23,7 +23,7 @@ zuul:
       path: /account/**
       sensitiveHeaders: 
       serviceId: account-service
-      
+
 eureka:
   client:
     registerWithEureka: false
@@ -43,7 +43,7 @@ security:
       userInfoUri: http://localhost:8765/uaa/user
       preferTokenInfo: false  
   sessions: ALWAYS 
-    
+
 #security:
 #  oauth2:
 #    sso:

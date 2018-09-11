@@ -5,10 +5,10 @@ spring:
   application:
     name: auth-server
   datasource:
-    url: jdbc:mysql://192.168.99.100:33306/oauth2?useSSL=false
-    username: oauth2
-    password: oauth2
-    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:postgresql://localhost:5432/default?ssl=false
+    username: postgres
+    password: qwellk123
+    driver-class-name: org.postgresql.Driver
     schema: classpath:/script/schema.sql
     data: classpath:/script/data.sql
     

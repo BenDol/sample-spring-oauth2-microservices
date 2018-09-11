@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
 
-@Entity
+@Entity(name = "users")
 public class User {
 
 	@Id
