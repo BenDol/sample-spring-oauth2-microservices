@@ -23,6 +23,11 @@ zuul:
       path: /account/**
       sensitiveHeaders: 
       serviceId: account-service
+    budget:
+      path: /budget/**
+      sensitiveHeaders:
+      serviceId: budget-app
+
 
 eureka:
   client:

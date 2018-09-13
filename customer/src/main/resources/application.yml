@@ -4,10 +4,11 @@ server:
 spring:  
   application:
     name: customer-service
-      
+  security:
+    user:
+      password: none
+
 security:
-  user:
-    password: none
   oauth2:
     client:
       client-id: customer-service

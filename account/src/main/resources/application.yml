@@ -4,6 +4,8 @@ server:
 spring:  
   application:
     name: account-service
+  jpa:
+    properties.hibernate.jdbc.lob.non_contextual_creation: true
 
 logging:
   level:
@@ -12,6 +14,8 @@ logging:
 security:
   user:
     password: none
+  basic:
+    enabled: false
   oauth2:
     client:
       client-id: account-service
